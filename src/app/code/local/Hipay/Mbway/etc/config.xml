@@ -1,0 +1,93 @@
+﻿<?xml version="1.0"?>
+<config>
+    <modules>
+       <Hipay_Mbway>
+          <version>1.0.0.0</version>
+       </Hipay_Mbway>
+    </modules>
+ 
+    <global>
+		<blocks>
+			<hipaymbway>
+				<class>Hipay_Mbway_Block</class>
+			</hipaymbway>
+		</blocks>
+        <models>
+            <hipaymbway>
+                <class>Hipay_Mbway_Model</class>
+            </hipaymbway>
+        </models>
+		 <helpers>
+			<hipaymbway>
+				<class>Hipay_Mbway_Helper</class>
+			</hipaymbway>
+		</helpers>
+        <resources>
+            <hipaymbway_setup>
+                <setup>
+                    <module>Hipay_Mbway</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </hipaymbway_setup>
+            <hipaymbway_write>
+                <connection>
+                  <use>core_write</use>
+                </connection>
+            </hipaymbway_write>
+            <hipaymbway_read>
+               <connection>
+                <use>core_read</use>
+              </connection>
+            </hipaymbway_read>
+        </resources>
+    </global>
+ 
+     <adminhtml>
+        <translate>
+            <modules>
+                <Hipay_Mbway>
+                    <files>
+                        <default>Hipay_Mbway.csv</default>
+                    </files>
+                </Hipay_Mbway>
+            </modules>
+        </translate>
+    </adminhtml>
+
+   
+    <frontend>
+        <translate>
+            <modules>
+                <Hipay_Mbway>
+                    <files>
+                        <default>Hipay_Mbway.csv</default>
+                    </files>
+                </Hipay_Mbway>
+            </modules>
+        </translate>
+        <routers>
+            <hipaymbway>
+                <use>standard</use>
+                <args>
+                    <module>Hipay_Mbway</module>
+                    <frontName>hipaymbway</frontName>
+                </args>
+            </hipaymbway>
+        </routers>
+    </frontend>
+ 
+    <default>
+        <payment>
+            <hipaymbway>
+                <active>0</active>
+                <model>hipaymbway/paymentmethod</model>
+                <order_status>pending</order_status>
+                <title>MB WAY</title>
+                <payment_action>authorize</payment_action>
+                <allowspecific>0</allowspecific>
+            </hipaymbway>
+         </payment>
+    </default>
+</config>

@@ -1,0 +1,11 @@
+<config>
+    <modules>
+        <Hipay_Mbway>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <Mage_Payment />
+            </depends>
+        </Hipay_Mbway>
+    </modules>
+</config>
