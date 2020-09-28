@@ -1,12 +1,11 @@
 <?php
+
 /**
  * @author hipay.pt
  */
+class Hipay_Mbway_Model_Entity {
 
-class Hipay_Mbway_Model_Entity
-{
-    public function toOptionArray()
-    {
+    public function toOptionArray() {
         return array(
             array(
                 'value' => '10241',
@@ -14,8 +13,9 @@ class Hipay_Mbway_Model_Entity
             ),
             array(
                 'value' => '11249',
-                'label' => '11249 / 12101'
+                'label' => '11249 / 12101 / 12281'
             ),
         );
     }
+
 }
